@@ -73,7 +73,17 @@ This is an example of an api test framework.
 * DELETE /books/{id}: Deletes a specific book. Only books without reviews can be deleted.
 
 
-# Future work
+## How to run the functional tests on a specified environment
+- make a virutal environment `python3 -m venv ven`
+- activate the virtual environment `source venv/bin/activate`
+- Install dependencies `pip install -r requirements.txt`
+- Run individual test: `pytest functional_tests/test_file.py/test_function_name --env local|staging` 
+- Or run by test module: `pytest functional_tests/test_file.py  --env local|staging` 
+- Or run by test suite: `pytest functional_tests  --env local|staging`
+- you can deactivate your virtual env after you're done `deactivate`
+
+
+## Future work
 * For the purpose of showing you my understanding and coding skills in API testing, I used my favorite language Python for this exercise. I understand Gainbridge uses javascript/typescript extensively for both front and backend development. Also it was hard to find information on k6 in Python. In the future, I need to improve my js skills on the job. I combined Python API testing and Javascript load testing in one repo, this is not a ideal blending. I'm aware of that. 
 
 * Deserialize json object into a customized Book class. This would make assertion/verificaiton more robust and less error prone. 
@@ -90,4 +100,4 @@ This is an example of an api test framework.
 
 
 ## Disclaimer
-This exercise might have typos through the repo just because I don't have a live service to run the tests against. 
+This exercise might have typos throughout the repo just because I don't have a live service to run the tests against. 
