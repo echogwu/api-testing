@@ -94,6 +94,8 @@ This is an example of an api test framework.
 
 * If these API endpoints are serving websites, we can also add a test case for cookies.
 
+* If other websites would request info from this bookstore web server, we also need to add a test case for CORS.
+
 * For now, I have a javascript to do some basic load testing against the GET endpoint with a specified RPS and SLA. I don't have a full understanding of k6 yet, but am willing to learn as I go. [This blog](https://k6.io/blog/building-a-ui-for-the-k6-load-testing-tool/) seems to be an interesting read to build a in-house load testing dashboard. 
 
 * In terms of organizaiton for load testing, we can resort to the testing pyramid and run load testing on different levels(if it's a micro-service architecture): component level, integration level and end-to-end level. Also we need run load testing against each API endpoint. 
